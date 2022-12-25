@@ -1,0 +1,26 @@
+:root {
+  --color-paths: #fff;
+  --color-points: tomato;
+  --color-lines: #fff;
+  --color-circles: tomato;
+  --color-circles-over: lime;
+  --color-code: rgba(221, 221, 221, 0.4);
+  --color-bg: #000;
+}
+
+html {
+  height: 100%;
+}
+
+#svg {
+  transform: rotate(-90deg);
+}
+
+#svg path {
+  stroke-width: 8;
+  stroke: black;
+  stroke-linecap: round;
+  fill: none;
+}
+
+/*# sourceMappingURL=style.css.map */
