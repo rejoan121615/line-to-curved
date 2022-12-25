@@ -5,9 +5,9 @@ $("#btn").click(function () {
     function per(high, low, input) {
         return (high - low) * (input / 100);
     }
-    // c value h = 169 , l = 98
-    const cValue = per(169, 98, 100 - userInput);
-    const curveValue = per(248, 50, 100 - userInput);
+    // c value h = 169 , l = 100
+    const cValue = per(169, 100, 100 - userInput);
+    const curveValue = per(250, 50, 100 - userInput);
     const alterValue = per(400, 320, 100 - userInput); /// genrate minus val
 
 
@@ -22,7 +22,7 @@ $("#btn").click(function () {
         // generate path
         $("#svg path").attr(
             "d",
-            `M100,250 C${cValue + 98},${curveValue + 50} ${400 - alterValue},${
+            `M100,250 C${cValue + 100},${curveValue + 50} ${400 - alterValue},${
                 curveValue + 50
             } 400,250`
         );
