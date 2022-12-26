@@ -21,6 +21,7 @@ html {
   stroke: black;
   stroke-linecap: round;
   fill: none;
+  transition: all 0.7s;
 }
 
 /*# sourceMappingURL=style.css.map */
