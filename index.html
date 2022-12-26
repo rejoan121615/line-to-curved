@@ -13,18 +13,19 @@
                 <input value="0" type="number" id="user-value" />
                 <button id="btn">change</button>
             </div>
-            <svg id="svg" width="500" height="500">
-                <g id="points">
-                    <circle id="p2" cx="400" cy="250" r="8"></circle>
-                </g>
-                <g id="paths">
-                    <path
-                        id="curve"
-                        d="M100,250 C100,250 400,250 400,250"
-                    ></path>
-                    <!-- <path id="curve" d="M100,250 C100,80 399,80 400,250"></path> -->
-                </g>
-            </svg>
+            <div class="svg-wrap">
+                <svg id="svg" viewBox="0 0 500 500">
+                    <g id="points">
+                        <circle id="p2" cx="400" cy="250" r="8"></circle>
+                    </g>
+                    <g id="paths">
+                        <path
+                            id="curve"
+                            d="M100,250 C100,250 400,250 400,250"
+                        ></path>
+                    </g>
+                </svg>
+            </div>
         </main>
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
