@@ -5,33 +5,21 @@ $("#btn").click(function () {
     function per(high, low, input) {
         return (high - low) * (input / 100);
     }
-    // c value h = 169 , l = 100
-    const cValue = per(169, 100, 100 - userInput);
-    const curveValue = per(250, 50, 100 - userInput);
-    const alterValue = per(400, 320, 100 - userInput); /// genrate minus val
-
-
-    // value generator
-    // let alterInput = 100 - userInput;
-    // let alterInput = userInput;
-    // let highest = 250;
-    // let lowest = 60;
-
+    // generate percentage value
+    // const cValue = per(169, 100, 100 - userInput);
+    // const curveValue = per(250, 50, 100 - userInput);
+    // const alterValue = per(400, 320, 100 - userInput);
+    // generate path
     if (!(userInput < 0 || userInput > 100)) {
-        // const pathValue = (highest - lowest) * (alterInput / 100);
-        // generate path
+        const cValue = per(208, 100, 100 - userInput);
+        const curveValue = per(188, 50, 100 - userInput);
+        const alterValue = per(400, 290, 100 - userInput);
         $("#svg path").attr(
             "d",
             `M100,250 C${cValue + 100},${curveValue + 50} ${400 - alterValue},${
                 curveValue + 50
             } 400,250`
         );
-        // $("#svg path").attr(
-        //     "d",
-        //     `M100,250 C100,${pathValue + lowest} 399,${
-        //         pathValue + lowest
-        //     } 400,250`
-        // );
     } else {
         alert("select a input value between 0-50");
     }
